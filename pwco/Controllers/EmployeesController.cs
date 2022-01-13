@@ -54,5 +54,36 @@ namespace pwco.Controllers
             }
             return RedirectToAction("GetEmployees");
         }
+        [HttpGet]
+        public IActionResult EditEmployee(int Id)
+        {
+            List<EmployeesVM> employees = null;
+            using (pwcodbContext context = new pwcodbContext())
+            {
+                employees = context.Employees.Select(x => new EmployeesVM(x)).ToList();
+            }
+            var tmp = employees.Where(x => x.Id == Id).FirstOrDefault();
+            return View(tmp);
+        }
+        [HttpPost]
+        public IActionResult EditEmployee(EmployeesVM employee)
+        {
+            using (pwcodbContext context = new pwcodbContext())
+            {
+                var newEmployee = new Employees()
+                {
+                    Id = employee.Id,
+                    Name = employee.Name,
+                    Surname = employee.Surname,
+                    Phone = employee.Phone,
+                    Email = employee.Email
+                };
+
+                context.Employees.Update(newEmployee);
+                context.SaveChanges();
+
+            }
+            return RedirectToAction("GetEmployees");
+        }
     }
 }
