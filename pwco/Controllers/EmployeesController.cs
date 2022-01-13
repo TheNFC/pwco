@@ -28,5 +28,31 @@ namespace pwco.Controllers
 
             return View("GetEmployees",employee);
         }
+
+        [HttpGet]
+        public IActionResult AddEmployee()
+        {
+            return View(new EmployeesVM());
+        }
+
+        [HttpPost]
+        public IActionResult AddEmployee(EmployeesVM employees)
+        {
+            using (pwcodbContext context = new pwcodbContext())
+            {
+                var newEmployee = new Employees()
+                {
+                    Id = employees.Id,
+                    Name = employees.Name,
+                    Surname = employees.Surname,
+                    Phone = employees.Phone,
+                    Email = employees.Email
+                };
+
+                context.Employees.Add(newEmployee);
+                context.SaveChanges();
+            }
+            return RedirectToAction("GetEmployees");
+        }
     }
 }

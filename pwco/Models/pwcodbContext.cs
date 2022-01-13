@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using pwco.Models;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -35,18 +34,16 @@ namespace pwco.Models
         {
             modelBuilder.Entity<Employees>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("employees");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnName("email")
                     .IsUnicode(false);
-
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasColumnType("numeric(18, 0)");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -68,7 +65,5 @@ namespace pwco.Models
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-        public DbSet<pwco.Models.EmployeesVM> EmployeesVM { get; set; }
     }
 }
