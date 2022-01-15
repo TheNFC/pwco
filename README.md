@@ -18,7 +18,7 @@
 </p>
 
 ## Project Overview 🎉
-essa
+Our web app was created for managing employees. 
 ## Tech/framework used 🔧
 
 | Tech                                                    | Description                              |
