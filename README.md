@@ -47,15 +47,6 @@ Our web app was created for managing employees.
 
 ## Installation 💾
 
-## Available scripts
-
-| Command                   | Description                   |     |
-| ------------------------- | ----------------------------- | --- |
-| `npm run start`           | Open local server             |     |
-| `npm run build`           | Create optimized build        |     |
-| `npm run test`            | Run tests                     |     |
-
-
 ## Live 📍
 URL to demo website: [CLICK](https://pwco20220113190332.azurewebsites.net/)
 ## License 🔱
