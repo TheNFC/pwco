@@ -11,10 +11,10 @@
 <h4 align="center">Employees Management Tool</h4>
 
 <p align="center">
-  <a >
+  
     <img src="https://github.com/TheNFC/pwco/blob/master/Zrzut%20ekranu%202022-01-16%20125455.png"
          alt="Screenshot">
-  </a>
+  
 </p>
 
 ## Project Overview 🎉
