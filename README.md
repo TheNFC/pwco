@@ -18,7 +18,7 @@
 </p>
 
 ## Project Overview 🎉
-Our web app was created for managing employees. 
+Our web app was created for managing employees. Build in C# and ASP.NET technology, using Microsoft SQL DB host on Azure to store data. 
 ## Tech/framework used 🔧
 
 | Tech                                                    | Description                              |
