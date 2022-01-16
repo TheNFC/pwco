@@ -1,13 +1,15 @@
 ﻿@model pwco.Models.EmployeesVM
 
 @{
-    ViewData["Title"] = "EditEmployee";
+    ViewData["Title"] = "Edit employee";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>EditEmployee</h1>
+@Html.Partial("_verify")
 
-<h4>EmployeesVM</h4>
+<h1>Edit employee</h1>
+
+<h4>Employees</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">

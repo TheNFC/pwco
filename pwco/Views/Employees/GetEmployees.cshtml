@@ -1,14 +1,22 @@
 ﻿@model IEnumerable<pwco.Models.EmployeesVM>
+@using Microsoft.AspNetCore.Identity
+@using pwco.Areas.Identity.Data
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
-    ViewData["Title"] = "GetEmployees";
+    ViewData["Title"] = "Employees";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>GetEmployees</h1>
+<h1>Employees</h1>
 
 <p>
-    <a asp-action="AddEmployee">Add new employee</a>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a asp-action="AddEmployee">Add new employee</a>
+    }
+
 </p>
 <table class="table">
     <thead>
@@ -29,25 +37,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                <a asp-action="EditEmployee" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="DeleteEmployee" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-action="EditEmployee" asp-route-id="@item.Id">Edit</a> 
+                        <a asp-action="DeleteEmployee" asp-route-id="@item.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
