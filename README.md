@@ -12,7 +12,7 @@
 
 <p align="center">
   <a >
-    <img src=""
+    <img src="https://github.com/TheNFC/pwco/blob/master/Zrzut%20ekranu%202022-01-16%20125455.png"
          alt="Screenshot">
   </a>
 </p>
