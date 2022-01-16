@@ -43,6 +43,7 @@ Our web app was created for managing employees. Build in C# and ASP.NET Core tec
 </p>
 
 ## Code Example/Issues 🔍
+Autoryzacja
 ```C#
 @using Microsoft.AspNetCore.Identity
 @using pwco.Areas.Identity.Data
