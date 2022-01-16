@@ -56,7 +56,5 @@ Autoryzacja
     Context.Response.Redirect("/");
 }
 ```
-## Installation 💾
-
 ## Live 📍
 URL to demo website: [CLICK](https://pwco20220113190332.azurewebsites.net/)
