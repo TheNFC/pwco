@@ -11,7 +11,7 @@
 <h4 align="center">Employees Management Tool</h4>
 
 <p align="center">
-  <img src="https://github.com/TheNFC/pwco/blob/master/Zrzut%20ekranu%202022-01-16%20125455.png"
+  <img src="https://github.com/TheNFC/pwco/blob/master/screenshots/mainScreen.png"
       alt="Screenshot">
   </p>
 
@@ -29,15 +29,15 @@ Our web app was created for managing employees. Build in C# and ASP.NET Core tec
 ## Screenshots 📺
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/TheNFC/pwco/blob/master/screenshots/GeneralLook.png" alt="Screenshot">
 </p>
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/TheNFC/pwco/blob/master/screenshots/AddEmployee.png" alt="Screenshot">
 </p>
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/TheNFC/pwco/blob/master/screenshots/Edit.png" alt="Screenshot">
 </p>
 
 ## Code Example/Issues 🔍
