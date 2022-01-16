@@ -11,11 +11,9 @@
 <h4 align="center">Employees Management Tool</h4>
 
 <p align="center">
-  <a >
-    <img src="https://github.com/TheNFC/pwco/blob/master/Zrzut%20ekranu%202022-01-16%20125455.png"
-         alt="Screenshot">
-  </a>
-</p>
+  <img src="https://github.com/TheNFC/pwco/blob/master/Zrzut%20ekranu%202022-01-16%20125455.png"
+      alt="Screenshot">
+  </p>
 
 ## Project Overview 🎉
 Our web app was created for managing employees. Build in C# and ASP.NET Core technology, using Microsoft SQL DB host on Azure to store data. 
@@ -56,7 +54,5 @@ Autoryzacja
     Context.Response.Redirect("/");
 }
 ```
-## Installation 💾
-
 ## Live 📍
 URL to demo website: [CLICK](https://pwco20220113190332.azurewebsites.net/)
